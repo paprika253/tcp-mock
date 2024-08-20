@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  mock:
+    image: golang:1.23.0-alpine3.20
+    volumes:
+      - .:/go/mock
+    ports:
+      - 3006:80
+    working_dir: /go/mock
+    command: go run main.go
